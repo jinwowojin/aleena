@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Creator Profile</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+
+  <div id="ageModal" class="modal">
+    <div class="modal-content">
+      <h2>This is an adult website</h2>
+      <!-- <p>You must be 18 or older to view this content.</p> -->
+      <button onclick="confirmAge(true)">   ENTER   </button>
+      <button onclick="confirmAge(false)">I'M NOT OVER 18</button>
+    </div>
+  </div>
+  
+<!-- Cover Image -->
+<div id="cover-container">
+  <img src="images\banner.jpg" alt="Website Cover" id="cover-image">
+</div>
+
+
+
+  <div class="min-h-screen bg-gray">
+    <!-- Cover Image -->
+    <div class="cover-image">
+      <img src="images\cover.jpg" alt="Cover">
+      <div class="cover-overlay"></div>
+    </div>
+    
+    <!-- Profile Section -->
+    <div class="container">
+      <div class="profile-card">
+        <div class="profile-content">
+          <!-- Profile Image -->
+          <div class="profile-image-container">
+            <img class="profile-image" src="images\profile.jpg" alt="areeba on fire">
+            <div class="verified-badge">
+              <i data-lucide="crown"></i>
+              Verified
+            </div>
+          </div>
+
+          <!-- Profile Info -->
+          <div class="profile-info">
+            <div class="profile-header">
+              <div>
+                <h1>Aleena Secret</h1>
+                <p class="handle">@aleenasecret</p>
+                <p class="bio">☺️Aleena a little crazy girl<br> 🎀19 years old <br>📍Pakistan-Canada</p>
+              </div>
+              <div class="profile-actions">
+                <button class="btn-primary">
+                  <i data-lucide="bookmark-plus"></i>
+                  Subscribe
+                </button>
+                <button class="btn-secondary">
+                  <i data-lucide="mail"></i>
+                  Message
+                </button>
+              </div>
+            </div>
+
+            <!-- Stats -->
+            <div class="stats-grid">
+              <div class="stat-card">
+                <p class="stat-value">10</p>
+                <p class="stat-label">Posts</p>
+              </div>
+              <div class="stat-card">
+                <p class="stat-value">5202</p>
+                <p class="stat-label">Views</p>
+              </div>
+              <div class="stat-card">
+                <p class="stat-value">355</p>
+                <p class="stat-label">Followers</p>
+              </div>
+              <div class="stat-card">
+                <p class="stat-value">22</p>
+                <p class="stat-label">Following</p>
+              </div>
+            </div>
+
+            <!-- Social Links -->
+            <div class="social-links">
+              <a href="#" class="social-link">
+                <i data-lucide="twitter"></i>
+              </a>
+              <a href="#" class="social-link">
+                <i data-lucide="instagram"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- View Toggle -->
+      <div class="view-toggle-container">
+        <h2>Latest Posts</h2>
+        <div class="view-toggle">
+          <button class="view-btn active" data-view="grid">
+            <i data-lucide="grid"></i>
+          </button>
+          <button class="view-btn" data-view="list">
+            <i data-lucide="list"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Content Grid -->
+      <div class="content-grid" id="postsContainer">
+        <!-- Posts will be dynamically inserted here -->
+      </div>
+    </div>
+
+    <!-- ✅ Payment Modal -->
+<div id="paymentModal" class="modal">
+  <div class="modal-content">
+      <span class="close-btn" onclick="closePaymentModal()">&times;</span>
+      <h2>Select Payment Method</h2>
+      <button onclick="showPaymentImage('paypal')">Pay with PayPal</button>
+      <button onclick="showPaymentImage('hbl')">Pay with HBL</button>
+      <br>
+      <img id="paymentImage" src="" alt="Payment QR Code" style="display:none; width: 200px; margin-top: 10px;">
+  </div>
+</div>
+
+
+
+
+<!-- ✅ Comments Modal -->
+<div id="commentsModal" class="modal">
+  <div class="modal-content">
+      <h3>Comments</h3>
+      <div id="commentsList"></div>
+      <div class="comment-box">
+      </div>
+      <button onclick="closeCommentsModal()">Close</button>
+  </div>
+</div>
+    
+<!-- Bottom Subscribe Section (Page End Pe) -->
+<div id="bottom-subscribe">
+  <h2>🔓 Unlock Exclusive Content</h2>
+  <!-- <p>Get access to premium content, behind-the-scenes, and personal messages!</p> -->
+
+
+  </div>
+
+
+
+  <script src="script.js"></script>
+</body>
+</html>
